@@ -1,0 +1,11 @@
+﻿Build started 07/04/2016 10:20:05.
+     1>Project "C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\MonitorLab\MonitorLab.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Release\MonitorLab.pch" /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>c:\users\lab422\desktop\subjects folder\software examples\monitorlab\monitorlab\stdafx.h(17): fatal error C1083: Cannot open include file: 'SFML\Graphics.hpp': No such file or directory
+     1>Done Building Project "C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\MonitorLab\MonitorLab.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.13
