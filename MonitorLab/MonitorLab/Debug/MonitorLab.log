@@ -1,66 +1,29 @@
-﻿Build started 07/04/2016 10:37:06.
-     1>Project "C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\MonitorLab\MonitorLab.vcxproj" on node 2 (Build target(s)).
+﻿Build started 07/04/2016 11:14:34.
+     1>Project "C:\Users\lab422\Desktop\Monitors\MonitorLabs\MonitorLab\MonitorLab\MonitorLab.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Boost\boost_1_60_0 /IC:\connector\include /I"C:\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt MonitorLab.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Boost\boost_1_60_0 /IC:\connector\include /I"C:\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\MonitorLab.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Boost\boost_1_60_0 /IC:\connector\include /I"C:\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Monitor.cpp MonitorLab.cpp Player.cpp
+         Player.cpp
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\player.cpp(2): fatal error C1083: Cannot open include file: 'Player.h': No such file or directory
          MonitorLab.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\Debug\MonitorLab.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Boost\boost_1_60_0\stage\lib /LIBPATH:C:\connector\lib /LIBPATH:"C:\SFML-2.3.2\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\Debug\MonitorLab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\Debug\MonitorLab.lib" /MACHINE:X86 Debug\Bullet.obj
-         Debug\Enemy.obj
-         Debug\Monitor.obj
-         Debug\MonitorLab.obj
-         Debug\Player.obj
-         Debug\stdafx.obj
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setPosition(float,float)" (__imp_?setPosition@Transformable@sf@@QAEXMM@Z) referenced in function "public: void __thiscall Bullet::Update(void)" (?Update@Bullet@@QAEXXZ)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setPosition(float,float)" (__imp_?setPosition@Transformable@sf@@QAEXMM@Z)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setPosition(float,float)" (__imp_?setPosition@Transformable@sf@@QAEXMM@Z)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setPosition(class sf::Vector2<float> const &)" (__imp_?setPosition@Transformable@sf@@QAEXABV?$Vector2@M@2@@Z) referenced in function "public: __thiscall Bullet::Bullet(class sf::Vector2<float>)" (??0Bullet@@QAE@V?$Vector2@M@sf@@@Z)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setOrigin(float,float)" (__imp_?setOrigin@Transformable@sf@@QAEXMM@Z) referenced in function "public: __thiscall Bullet::Bullet(class sf::Vector2<float>)" (??0Bullet@@QAE@V?$Vector2@M@sf@@@Z)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setOrigin(float,float)" (__imp_?setOrigin@Transformable@sf@@QAEXMM@Z)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setOrigin(float,float)" (__imp_?setOrigin@Transformable@sf@@QAEXMM@Z)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::Transformable::getPosition(void)const " (__imp_?getPosition@Transformable@sf@@QBEABV?$Vector2@M@2@XZ) referenced in function "public: void __thiscall Bullet::Update(void)" (?Update@Bullet@@QAEXXZ)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::Transformable::getPosition(void)const " (__imp_?getPosition@Transformable@sf@@QBEABV?$Vector2@M@2@XZ)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::Transformable::getPosition(void)const " (__imp_?getPosition@Transformable@sf@@QBEABV?$Vector2@M@2@XZ)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::Texture(void)" (__imp_??0Texture@sf@@QAE@XZ) referenced in function "public: __thiscall Bullet::Bullet(class sf::Vector2<float>)" (??0Bullet@@QAE@V?$Vector2@M@sf@@@Z)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::Texture(void)" (__imp_??0Texture@sf@@QAE@XZ)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::Texture(void)" (__imp_??0Texture@sf@@QAE@XZ)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::~Texture(void)" (__imp_??1Texture@sf@@QAE@XZ) referenced in function __unwindfunclet$??0Bullet@@QAE@V?$Vector2@M@sf@@@Z$1
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::~Texture(void)" (__imp_??1Texture@sf@@QAE@XZ)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::~Texture(void)" (__imp_??1Texture@sf@@QAE@XZ)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: bool __thiscall sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (__imp_?loadFromFile@Texture@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$Rect@H@2@@Z) referenced in function "public: __thiscall Bullet::Bullet(class sf::Vector2<float>)" (??0Bullet@@QAE@V?$Vector2@M@sf@@@Z)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: bool __thiscall sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (__imp_?loadFromFile@Texture@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$Rect@H@2@@Z)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: bool __thiscall sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (__imp_?loadFromFile@Texture@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$Rect@H@2@@Z)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<unsigned int> __thiscall sf::Texture::getSize(void)const " (__imp_?getSize@Texture@sf@@QBE?AV?$Vector2@I@2@XZ) referenced in function "public: __thiscall Bullet::Bullet(class sf::Vector2<float>)" (??0Bullet@@QAE@V?$Vector2@M@sf@@@Z)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<unsigned int> __thiscall sf::Texture::getSize(void)const " (__imp_?getSize@Texture@sf@@QBE?AV?$Vector2@I@2@XZ)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<unsigned int> __thiscall sf::Texture::getSize(void)const " (__imp_?getSize@Texture@sf@@QBE?AV?$Vector2@I@2@XZ)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Sprite::Sprite(void)" (__imp_??0Sprite@sf@@QAE@XZ) referenced in function "public: __thiscall Bullet::Bullet(class sf::Vector2<float>)" (??0Bullet@@QAE@V?$Vector2@M@sf@@@Z)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Sprite::Sprite(void)" (__imp_??0Sprite@sf@@QAE@XZ)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Sprite::Sprite(void)" (__imp_??0Sprite@sf@@QAE@XZ)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Sprite::setTexture(class sf::Texture const &,bool)" (__imp_?setTexture@Sprite@sf@@QAEXABVTexture@2@_N@Z) referenced in function "public: __thiscall Bullet::Bullet(class sf::Vector2<float>)" (??0Bullet@@QAE@V?$Vector2@M@sf@@@Z)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Sprite::setTexture(class sf::Texture const &,bool)" (__imp_?setTexture@Sprite@sf@@QAEXABVTexture@2@_N@Z)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Sprite::setTexture(class sf::Texture const &,bool)" (__imp_?setTexture@Sprite@sf@@QAEXABVTexture@2@_N@Z)
-     1>Bullet.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Sprite::~Sprite(void)" (__imp_??1Sprite@sf@@UAE@XZ) referenced in function __unwindfunclet$??0Bullet@@QAE@V?$Vector2@M@sf@@@Z$0
-     1>Enemy.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Sprite::~Sprite(void)" (__imp_??1Sprite@sf@@UAE@XZ)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Sprite::~Sprite(void)" (__imp_??1Sprite@sf@@UAE@XZ)
-     1>Bullet.obj : error LNK2001: unresolved external symbol "private: virtual void __thiscall sf::Sprite::draw(class sf::RenderTarget &,class sf::RenderStates)const " (?draw@Sprite@sf@@EBEXAAVRenderTarget@2@VRenderStates@2@@Z)
-     1>Enemy.obj : error LNK2001: unresolved external symbol "private: virtual void __thiscall sf::Sprite::draw(class sf::RenderTarget &,class sf::RenderStates)const " (?draw@Sprite@sf@@EBEXAAVRenderTarget@2@VRenderStates@2@@Z)
-     1>Player.obj : error LNK2001: unresolved external symbol "private: virtual void __thiscall sf::Sprite::draw(class sf::RenderTarget &,class sf::RenderStates)const " (?draw@Sprite@sf@@EBEXAAVRenderTarget@2@VRenderStates@2@@Z)
-     1>Enemy.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::scale(float,float)" (__imp_?scale@Transformable@sf@@QAEXMM@Z) referenced in function "public: __thiscall Enemy::Enemy(void)" (??0Enemy@@QAE@XZ)
-     1>MonitorLab.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::String::String(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::locale const &)" (__imp_??0String@sf@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVlocale@3@@Z) referenced in function "void __cdecl MonitorFetch(void)" (?MonitorFetch@@YAXXZ)
-     1>MonitorLab.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::String::~String(void)" (__imp_??1String@sf@@QAE@XZ) referenced in function "void __cdecl MonitorFetch(void)" (?MonitorFetch@@YAXXZ)
-     1>MonitorLab.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Text::Text(void)" (__imp_??0Text@sf@@QAE@XZ) referenced in function "void __cdecl `dynamic initializer for 'displayText''(void)" (??__EdisplayText@@YAXXZ)
-     1>MonitorLab.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Text::setString(class sf::String const &)" (__imp_?setString@Text@sf@@QAEXABVString@2@@Z) referenced in function "void __cdecl MonitorFetch(void)" (?MonitorFetch@@YAXXZ)
-     1>MonitorLab.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Text::~Text(void)" (__imp_??1Text@sf@@UAE@XZ) referenced in function "void __cdecl `dynamic atexit destructor for 'displayText''(void)" (??__FdisplayText@@YAXXZ)
-     1>Player.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: float __thiscall sf::Time::asSeconds(void)const " (__imp_?asSeconds@Time@sf@@QBEMXZ) referenced in function "public: void __thiscall Player::Update(void)" (?Update@Player@@QAEXXZ)
-     1>Player.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Clock::Clock(void)" (__imp_??0Clock@sf@@QAE@XZ) referenced in function "public: __thiscall Player::Player(void)" (??0Player@@QAE@XZ)
-     1>Player.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: class sf::Time __thiscall sf::Clock::getElapsedTime(void)const " (__imp_?getElapsedTime@Clock@sf@@QBE?AVTime@2@XZ) referenced in function "public: void __thiscall Player::Update(void)" (?Update@Player@@QAEXXZ)
-     1>Player.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: class sf::Time __thiscall sf::Clock::restart(void)" (__imp_?restart@Clock@sf@@QAE?AVTime@2@XZ) referenced in function "public: __thiscall Player::Player(void)" (??0Player@@QAE@XZ)
-     1>Player.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::RenderTarget::draw(class sf::Drawable const &,class sf::RenderStates const &)" (__imp_?draw@RenderTarget@sf@@QAEXABVDrawable@2@ABVRenderStates@2@@Z) referenced in function "public: void __thiscall Player::DrawBullets(class sf::RenderTarget &)" (?DrawBullets@Player@@QAEXAAVRenderTarget@sf@@@Z)
-     1>Player.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Sprite::setTextureRect(class sf::Rect<int> const &)" (__imp_?setTextureRect@Sprite@sf@@QAEXABV?$Rect@H@2@@Z) referenced in function "public: __thiscall Player::Player(void)" (??0Player@@QAE@XZ)
-     1>Player.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: class sf::Rect<float> __thiscall sf::Sprite::getGlobalBounds(void)const " (__imp_?getGlobalBounds@Sprite@sf@@QBE?AV?$Rect@M@2@XZ) referenced in function "public: bool __thiscall Player::BulletEnemyCollisions(class Enemy *)" (?BulletEnemyCollisions@Player@@QAE_NPAVEnemy@@@Z)
-     1>Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class sf::RenderStates const sf::RenderStates::Default" (__imp_?Default@RenderStates@sf@@2V12@B)
-     1>C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\Debug\MonitorLab.exe : fatal error LNK1120: 26 unresolved externals
-     1>Done Building Project "C:\Users\lab422\Desktop\Subjects folder\SoftWare Examples\MonitorLab\MonitorLab\MonitorLab.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(45): error C2065: 'BoundedBuffer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(45): error C2146: syntax error: missing ';' before identifier 'buffer'
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(45): error C3861: 'buffer': identifier not found
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(47): error C2065: 'consumer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(47): error C2065: 'buffer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(48): error C2065: 'consumer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(48): error C2065: 'buffer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(49): error C2065: 'consumer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(49): error C2065: 'buffer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(50): error C2065: 'producer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(50): error C2065: 'buffer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(51): error C2065: 'producer': undeclared identifier
+     1>c:\users\lab422\desktop\monitors\monitorlabs\monitorlab\monitorlab\monitorlab.cpp(51): error C2065: 'buffer': undeclared identifier
+         Monitor.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\lab422\Desktop\Monitors\MonitorLabs\MonitorLab\MonitorLab\MonitorLab.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:02.88
+Time Elapsed 00:00:05.18

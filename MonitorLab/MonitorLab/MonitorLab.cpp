@@ -42,182 +42,29 @@ void MonitorFetch()
 
 int main()
 {
-	/*// Create the main window 
-	sf::RenderWindow window(sf::VideoMode(600, 400, 32), "SFML First Program");
+	BoundedBuffer buffer(200);
 
-	window.setFramerateLimit(60);
+	std::thread c1(consumer, 0, std::ref(buffer));
+	std::thread c2(consumer, 1, std::ref(buffer));
+	std::thread c3(consumer, 2, std::ref(buffer));
+	std::thread p1(producer, 0, std::ref(buffer));
+	std::thread p2(producer, 1, std::ref(buffer));
 
-	/* initialize random seed: */
-	/*srand(time(NULL));
+	c1.join();
+	c2.join();
+	c3.join();
+	p1.join();
+	p2.join();
 
-	//load a font
-	sf::Font font;
-	font.loadFromFile("C:\\Windows\\Fonts\\GARA.TTF");
+	return 0;
 
-	//create a formatted text string
-	sf::Text text;
-	text.setFont(font);
-	text.setString("Hello World");
-	text.setStyle(sf::Text::Underlined | sf::Text::Italic | sf::Text::Bold);
-	text.setPosition(20, 40);
-	text.setCharacterSize(40);
-
-	/*scrolling background stuff*/
-	/*int backgroundScrollSpeed = 1;
-	sf::Texture backgroundTexture;
-	backgroundTexture.loadFromFile("Assets/background.png");
-	sf::Sprite background1;
-	background1.setTexture(backgroundTexture);
-	background1.setPosition(0, 0);
-	background1.scale(3, 2);
-	background1.setColor(sf::Color::Cyan);
-	sf::Sprite background2;
-	background2.setTexture(backgroundTexture);
-	background2.setPosition(0, -400);
-	background2.scale(3, 2);
-	background2.setColor(sf::Color::Cyan);
-
-	Player* player = new Player();
-
-	std::vector<Enemy*> enemies;
-	sf::Clock spawnClock;
-	spawnClock.restart();
-
-	displayText.setFont(font);
-	displayText.setPosition(20, 20);
-	displayText.setString("");
-	displayText.setColor(sf::Color::Blue);
-
-	//std::thread t1;
-	sf::Thread thread(&MonitorFetch);
-
-	sf::Clock messageClock;
-	messageClock.restart();
-
-	int score = 0;
-	sf::Text scoreText;
-	scoreText.setFont(font);
-	scoreText.setPosition(SCREENWIDTH - 120, 20);
-	scoreText.setString("Score: " + std::to_string(score));
-	scoreText.setColor(sf::Color::Blue);
-
-	// Start game loop 
-	while (window.isOpen())
-	{
-		// Process events 
-		sf::Event Event;
-		while (window.pollEvent(Event))
-		{
-			// Close window : exit 
-			if (Event.type == sf::Event::Closed)
-				window.close();
-
-			// Escape key : exit 
-			if ((Event.type == sf::Event::KeyPressed) && (Event.key.code == sf::Keyboard::Escape))
-				window.close();
-
-			//space = shoot
-			if ((Event.type == sf::Event::KeyPressed) && (Event.key.code == sf::Keyboard::Space))
-			{
-				player->Shoot();
-				shootSound.play();
-			}
-
-			if ((Event.type == sf::Event::KeyPressed) && (Event.key.code == sf::Keyboard::F))
-			{
-				//std::string text; 
-				//monitor->Fetch(text);
-				//std::cout << text << std::endl;
-				//displayText.setString(text);
-
-			}
-		}
-
-		if (messageClock.getElapsedTime().asSeconds() > 0.5)
-		{
-			if (monitor->NewMsgAdded() == true)
-				thread.launch();
-			else std::cout << "No new messages were found." << std::endl;
-			messageClock.restart();
-		}
-
-		//prepare frame
-		window.clear();
-
-		//scroll the background
-		if (background1.getPosition().y < 400)
-			background1.setPosition(background1.getPosition().x, background1.getPosition().y + backgroundScrollSpeed);
-		else background1.setPosition(0, -395);
-		if (background2.getPosition().y < 400)
-			background2.setPosition(background2.getPosition().x, background2.getPosition().y + backgroundScrollSpeed);
-		else background2.setPosition(0, -395);
-
-		//right
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-			player->Strafe(1);
-		//left
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-			player->Strafe(2);
-
-
-		player->Update();
-		for (auto it = enemies.begin(); it != enemies.end();)
-		{
-			if (player->BulletEnemyCollisions(*it))//if a bullet and enemy collide
-			{
-				delete * it;//delete the pointer
-				it = enemies.erase(it);//erase the object(calls the objects destructor)
-				hitSound.play();
-				monitor->Deposit("Enemy Killed");
-				score += 25;
-				scoreText.setString("Score: " + std::to_string(score));
-			}
-			else ++it;
-		}
-
-		if (spawnClock.getElapsedTime().asSeconds() > 5)
-		{
-			Enemy* e = new Enemy();
-			enemies.push_back(e);
-			spawnClock.restart();
-			monitor->Deposit("Enemy Spawned");
-		}
-
-		if (score == 100)
-		{
-			background1.setColor(sf::Color::Red);
-			background2.setColor(sf::Color::Red);
-		}
-
-		//draw frame items
-		window.draw(background1);
-		window.draw(background2);
-
-		player->DrawBullets(window);
-		window.draw(*player);
-
-
-		for (int i = 0; i < enemies.size(); i++)
-		{
-			enemies.at(i)->Update();
-			window.draw(*enemies.at(i));
-		}
-
-		//std::thread t1(MonitorFetch);
-
-		window.draw(displayText);
-		window.draw(scoreText);
-
-		// Finally, display rendered frame on screen 
-		window.display();
-	} //loop back for next frame*/
-	std::string line = "Subject: Re: You have installed boost successfully";
+	/*std::string line = "Subject: Re: You have installed boost successfully";
 	boost::regex pat("^Subject: (Re: |Aw: )*(.*)"); \
 		boost::smatch matches;
 	if (boost::regex_match(line, matches, pat))
 		std::cout << matches[2] << std::endl;
 	system("PAUSE");
-	
+	*/
 	//sf::Thread thread(&MonitorFetch);
 
 	//return EXIT_SUCCESS;
@@ -272,4 +119,20 @@ struct BoundedBuffer {
 		return result;
 	}
 };
+
+void consumer(int id, BoundedBuffer& buffer) {
+	for (int i = 0; i < 50; ++i) {
+		int value = buffer.fetch();
+		std::cout << "Consumer " << id << " fetched " << value << std::endl;
+		std::this_thread::sleep_for(std::chrono::milliseconds(250));
+	}
+}
+
+void producer(int id, BoundedBuffer& buffer) {
+	for (int i = 0; i < 75; ++i) {
+		buffer.deposit(i);
+		std::cout << "Produced " << id << " produced " << i << std::endl;
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
+	}
+}
 

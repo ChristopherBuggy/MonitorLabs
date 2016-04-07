@@ -27,9 +27,6 @@
 #include <stdlib.h>     /* srand, rand */
 
 //project headers
-#include "Player.h"
-#include "Enemy.h"
-#include "Bullet.h"
 #include "Monitor.h"
 // TODO: reference additional headers your program requires here
 #endif
